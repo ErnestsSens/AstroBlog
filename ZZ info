@@ -3,3 +3,5 @@
 
 // <ul> un ordered list
 // <li> list item
+// rem - relative to the parent element
+// em - element
