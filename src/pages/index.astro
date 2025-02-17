@@ -1,6 +1,8 @@
 ---
-import '../styles/global.css';
-const pageTitle = 'My Astro Site';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+const pageTitle = "My Astro Site";
 ---
 
 <html lang="en">
@@ -12,12 +14,19 @@ const pageTitle = 'My Astro Site';
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-		<a href="/contacts/">Contacts</a>
-		
+		<Header />
 		<h1>{pageTitle}</h1>
 		<p>I am happy to build one :) 🚀</p>
+		<Footer />
+
+		<script>
+			document
+				.querySelector(".hamburger")
+				?.addEventListener("click", () => {
+					document
+						.querySelector(".nav-links")
+						?.classList.toggle("expanded");
+				});
+		</script>
 	</body>
 </html>
